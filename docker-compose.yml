@@ -1,0 +1,14 @@
+version: '3.4'
+services:
+  plexpy:
+    image: linuxserver/plexpy
+    container_name: plexpy
+    ports:
+      - "8181:8181"
+    volumes:
+      - "./config:/config"
+      - "./logs:/logs:ro"
+#    environment:
+#      - PGID=<gid>
+#      - PUID=<uid>
+#      - TZ=<timezone>
